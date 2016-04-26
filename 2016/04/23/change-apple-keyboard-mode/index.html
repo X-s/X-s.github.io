@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="MacBook,ubuntu," />
 
 
 
@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="他依然向往着长岛的雪，依然向往着潘帕斯的风吟鸟唱。很久我才知道，原来，长岛是没有雪的">
+<meta name="description" content="当你的MacBook处于ubuntu系统下时，可能会发现无法打出~按键的情况，或者想恢复F1-F12为普通按键，而不是功能键（毕竟ubunut系统下，更多使用的是普通的按键），所以这里记录一下修改方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[change-apple-keyboard-mode]">
+<meta property="og:title" content="在安装Ubuntu的MacBook上更改Apple 键盘模式">
 <meta property="og:url" content="http://notes.imxs.me/2016/04/23/change-apple-keyboard-mode/index.html">
 <meta property="og:site_name" content="Xs's Notes">
-<meta property="og:description" content="他依然向往着长岛的雪，依然向往着潘帕斯的风吟鸟唱。很久我才知道，原来，长岛是没有雪的">
-<meta property="og:updated_time" content="2016-04-23T14:25:57.489Z">
+<meta property="og:description" content="当你的MacBook处于ubuntu系统下时，可能会发现无法打出~按键的情况，或者想恢复F1-F12为普通按键，而不是功能键（毕竟ubunut系统下，更多使用的是普通的按键），所以这里记录一下修改方法">
+<meta property="og:updated_time" content="2016-04-26T18:03:23.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[change-apple-keyboard-mode]">
-<meta name="twitter:description" content="他依然向往着长岛的雪，依然向往着潘帕斯的风吟鸟唱。很久我才知道，原来，长岛是没有雪的">
+<meta name="twitter:title" content="在安装Ubuntu的MacBook上更改Apple 键盘模式">
+<meta name="twitter:description" content="当你的MacBook处于ubuntu系统下时，可能会发现无法打出~按键的情况，或者想恢复F1-F12为普通按键，而不是功能键（毕竟ubunut系统下，更多使用的是普通的按键），所以这里记录一下修改方法">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> [change-apple-keyboard-mode] | Xs's Notes </title>
+  <title> 在安装Ubuntu的MacBook上更改Apple 键盘模式 | Xs's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +214,7 @@
             
             
               
-                [change-apple-keyboard-mode]
+                在安装Ubuntu的MacBook上更改Apple 键盘模式
               
             
           </h1>
@@ -259,11 +259,26 @@
       
 
       
-        
+        <p>  当你的<code>MacBook</code>处于<code>ubuntu</code>系统下时，可能会发现无法打出<code>~</code>按键的情况，或者想恢复F1-F12<br>为普通按键，而不是功能键（毕竟ubunut系统下，更多使用的是普通的按键），所以这里记录一下修改方法</p>
+<a id="more"></a>
+<p><em>很简单的修改方法，直接给出操作步骤</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br><span class="line"><span class="comment">#更改FN功能键模式为普通模式</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"options hid-apple fnmode=2"</span> &gt; /etc/modprobe.d/hid-apple.conf</span><br><span class="line"><span class="comment">#更改键盘布局(for proper ~`)</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"options hid-apple iso_layout=0"</span> &gt; /etc/modprobe.d/hid-apple.conf</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em>参考资料</em><br><a href="https://help.ubuntu.com/community/AppleKeyboard" target="_blank" rel="external">https://help.ubuntu.com/community/AppleKeyboard</a></p>
+</blockquote>
+
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MacBook/" rel="tag">#MacBook</a>
+          
+            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+          
+        </div>
       
 
       
@@ -292,7 +307,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/04/23/change-apple-keyboard-mode/"
-     data-title="[change-apple-keyboard-mode]"
+     data-title="在安装Ubuntu的MacBook上更改Apple 键盘模式"
      data-content=""
      data-url="http://notes.imxs.me/2016/04/23/change-apple-keyboard-mode/">
   <div class="ds-share-inline">
@@ -322,7 +337,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/04/23/change-apple-keyboard-mode/"
-           data-title="[change-apple-keyboard-mode]" data-url="http://notes.imxs.me/2016/04/23/change-apple-keyboard-mode/">
+           data-title="在安装Ubuntu的MacBook上更改Apple 键盘模式" data-url="http://notes.imxs.me/2016/04/23/change-apple-keyboard-mode/">
       </div>
     
   </div>
@@ -381,7 +396,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
