@@ -91,6 +91,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在MacBook Pro 12-1 with ubuntu 15.10 上安装风扇控制器（mbpfan）">
 <meta name="twitter:description" content="前言  最近入了一款MacBook Pro 12-1（R屏 2015年 13款），由于工作内容需求，不得不安装了一份ubuntu 15.10，在使用过程中发现风扇转速不能很好的控制，经常出现温度过高，风扇却没怎么转的情况，Google了一下，发现有一个东西叫做mbpfan，这里记录一下安装及使用过程。">
+<meta name="twitter:image" content="http://notes.imxs.me/2016/02/01/install-mbpfan-with-MacBook-Pro-12-1/fan_speed.jpg">
 
 
 
@@ -285,9 +286,9 @@
       
 
       
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>  最近入了一款MacBook Pro 12-1（R屏 2015年 13款），由于工作内容需求，不得不安装了一份ubuntu 15.10，在使用过程中发现风扇转速不能很好的控制，经常出现温度过高，风扇却没怎么转的情况，Google了一下，发现有一个东西叫做<code>mbpfan</code>，这里记录一下安装及使用过程。<br><a id="more"></a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  最近入了一款MacBook Pro 12-1（R屏 2015年 13款），由于工作内容需求，不得不安装了一份ubuntu 15.10，在使用过程中发现风扇转速不能很好的控制，经常出现温度过高，风扇却没怎么转的情况，Google了一下，发现有一个东西叫做<code>mbpfan</code>，这里记录一下安装及使用过程。<br><a id="more"></a></p>
 <p><em>本文所有内容都基于ubuntu 15.10操作而来，不保证其他OS同样适用</em></p>
-<h3 id="u5F00_u59CB_u5B89_u88C5"><a href="#u5F00_u59CB_u5B89_u88C5" class="headerlink" title="开始安装"></a>开始安装</h3><ul>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><ul>
 <li><p>首先运行<code>git clone https://github.com/dgraziotin/mbpfan.git</code>将<code>mbpfan</code>源码下载下来，当然你也可以选择zip download等方法</p>
 </li>
 <li><p>将传感器mod加载进内核</p>
@@ -305,7 +306,7 @@
 <ul>
 <li>关于<code>mbpfan</code>配置文件，大家可以自行更改，我将默认的转速降低到1000，低温感受不到风扇声音了</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xs@xs-MacBookPro:~$ cat /etc/mbpfan.conf</span><br><span class="line">[general]</span><br><span class="line">min_fan_speed = <span class="number">1000</span>	<span class="comment"># default is 2000</span></span><br><span class="line">max_fan_speed = <span class="number">6200</span>	<span class="comment"># default is 6200</span></span><br><span class="line">low_temp = <span class="number">63</span>			<span class="comment"># try ranges 55-63, default is 63</span></span><br><span class="line">high_temp = <span class="number">66</span>			<span class="comment"># try ranges 58-66, default is 66</span></span><br><span class="line">max_temp = <span class="number">86</span>			<span class="comment"># do not set it &gt; 90, default is 86</span></span><br><span class="line">polling_interval = <span class="number">7</span>	<span class="comment"># default is 7</span></span><br><span class="line">xs@xs-MacBookPro:~$</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xs@xs-MacBookPro:~$ cat /etc/mbpfan.conf</span><br><span class="line">[general]</span><br><span class="line">min_fan_speed = 1000	<span class="comment"># default is 2000</span></span><br><span class="line">max_fan_speed = 6200	<span class="comment"># default is 6200</span></span><br><span class="line">low_temp = 63			<span class="comment"># try ranges 55-63, default is 63</span></span><br><span class="line">high_temp = 66			<span class="comment"># try ranges 58-66, default is 66</span></span><br><span class="line">max_temp = 86			<span class="comment"># do not set it &gt; 90, default is 86</span></span><br><span class="line">polling_interval = 7	<span class="comment"># default is 7</span></span><br><span class="line">xs@xs-MacBookPro:~$</span><br></pre></td></tr></table></figure>
 <img src="/2016/02/01/install-mbpfan-with-MacBook-Pro-12-1/fan_speed.jpg" alt="fan_speed.jpg" title="">
 <p><em>参考文献</em></p>
 <blockquote>
@@ -502,7 +503,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u524D_u8A00"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F00_u59CB_u5B89_u88C5"><span class="nav-number">1.1.</span> <span class="nav-text">开始安装</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开始安装"><span class="nav-number">1.1.</span> <span class="nav-text">开始安装</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

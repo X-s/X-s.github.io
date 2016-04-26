@@ -285,14 +285,14 @@
 
       
         <p>  本人由于维护一些项目，经常需要提交代码到github服务器，当某些仓库项目不属于ssh协议时，就会出现<code>git push</code>要求输入用户名和密码的情况，搜了一下给了个解决办法，这里记录一下。<a id="more"></a><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs@xs-MacBookPro:~/<span class="built_in">test</span>$ git push origin master</span><br><span class="line">Username <span class="keyword">for</span> <span class="string">'https://github.com'</span>:</span><br></pre></td></tr></table></figure></p>
-<h3 id="Linux_u4E0B"><a href="#Linux_u4E0B" class="headerlink" title="Linux下"></a>Linux下</h3><ol>
+<h3 id="Linux下"><a href="#Linux下" class="headerlink" title="Linux下"></a>Linux下</h3><ol>
 <li><p>在用户跟目录下<code>~/</code>创建文件<code>.git-credentials</code>，并打开编辑，输入内容：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://&#123;username&#125;:&#123;password&#125;@github.com</span><br><span class="line"><span class="comment">#例如https://X-s:github110@github.com</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在终端下执行<code>git config --global credential.helper store</code></p>
 </li>
 <li><p>可以看到<code>~/.gitconfig</code>文件，会多了一项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[credential]&#10;&#10;    helper = store</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[credential]</span><br><span class="line"></span><br><span class="line">    helper = store</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>此时再去<code>push</code>则不用输入账户名和密码了</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs@xs-MacBookPro:~/<span class="built_in">test</span>$ git push origin master</span><br><span class="line">Everything up-to-date</span><br></pre></td></tr></table></figure>
@@ -491,7 +491,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux_u4E0B"><span class="nav-number">1.</span> <span class="nav-text">Linux下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux下"><span class="nav-number">1.</span> <span class="nav-text">Linux下</span></a></li></ol></div>
             
           </div>
         </section>
