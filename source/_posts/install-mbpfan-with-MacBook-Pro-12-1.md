@@ -1,7 +1,7 @@
 ---
 title: '在MacBook Pro 12-1 with ubuntu 15.10 上安装风扇控制器（mbpfan）'
 date: 2016-02-01 09:25:57
-tags: [McaBook, ubuntu]
+tags: [MacBook, ubuntu]
 ---
 ## 前言
 
